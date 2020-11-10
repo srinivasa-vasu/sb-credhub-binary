@@ -1,0 +1,24 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  credhub:
+    url: https://credhub.service.cf.internal:8844
+    oauth2:
+      registration-id: credhub-client
+  security:
+    oauth2:
+      client:
+        registration:
+          credhub-client:
+            provider: uaa
+            client-id:
+            client-secret:
+            authorization-grant-type: client_credentials
+        provider:
+          uaa:
+            token-uri:
+

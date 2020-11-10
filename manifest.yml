@@ -1,0 +1,6 @@
+---
+applications:
+- name: credhub-binary
+  memory: 1G
+  path: build/libs/credhub-0.1.jar
+
